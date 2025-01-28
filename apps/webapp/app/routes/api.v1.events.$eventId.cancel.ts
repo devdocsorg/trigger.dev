@@ -1,5 +1,5 @@
-import type { ActionFunctionArgs } from "@remix-run/server-runtime";
-import { json } from "@remix-run/server-runtime";
+import type { ActionFunctionArgs } from "@vercel/remix";
+import { json } from "@vercel/remix";
 import { z } from "zod";
 import { eventRecordToApiJson } from "~/api.server";
 import { authenticateApiRequest } from "~/services/apiAuth.server";

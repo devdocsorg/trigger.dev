@@ -1,5 +1,5 @@
-import type { LoaderFunctionArgs } from "@remix-run/server-runtime";
-import { json } from "@remix-run/server-runtime";
+import type { LoaderFunctionArgs } from "@vercel/remix";
+import { json } from "@vercel/remix";
 import { z } from "zod";
 import { runOriginalStatus } from "~/models/jobRun.server";
 import { ApiRunPresenter } from "~/presenters/ApiRunPresenter.server";

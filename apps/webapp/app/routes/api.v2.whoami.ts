@@ -1,5 +1,5 @@
-import type { LoaderFunctionArgs } from "@remix-run/server-runtime";
-import { json } from "@remix-run/server-runtime";
+import type { LoaderFunctionArgs } from "@vercel/remix";
+import { json } from "@vercel/remix";
 import { WhoAmIResponse } from "@trigger.dev/core/v3";
 import { prisma } from "~/db.server";
 import { logger } from "~/services/logger.server";

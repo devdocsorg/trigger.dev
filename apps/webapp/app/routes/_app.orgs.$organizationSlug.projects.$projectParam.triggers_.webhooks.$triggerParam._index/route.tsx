@@ -1,7 +1,7 @@
 import { useForm } from "@conform-to/react";
 import { parse } from "@conform-to/zod";
 import { Form, useActionData, useNavigation } from "@remix-run/react";
-import type { LoaderFunctionArgs } from "@remix-run/server-runtime";
+import type { LoaderFunctionArgs } from "@vercel/remix";
 import { Fragment } from "react";
 import { typedjson, useTypedLoaderData } from "remix-typedjson";
 import { z } from "zod";

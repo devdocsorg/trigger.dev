@@ -1,5 +1,5 @@
 import { useRevalidator } from "@remix-run/react";
-import { LoaderFunctionArgs } from "@remix-run/server-runtime";
+import { LoaderFunctionArgs } from "@vercel/remix";
 import { useEffect, useMemo, useState } from "react";
 import { typedjson, useTypedLoaderData } from "remix-typedjson";
 import { useEventSource } from "~/hooks/useEventSource";

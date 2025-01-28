@@ -1,5 +1,5 @@
-import type { ActionFunctionArgs } from "@remix-run/server-runtime";
-import { json } from "@remix-run/server-runtime";
+import type { ActionFunctionArgs } from "@vercel/remix";
+import { json } from "@vercel/remix";
 import {
   CreateExternalConnectionBody,
   CreateExternalConnectionBodySchema,

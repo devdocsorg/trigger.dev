@@ -1,5 +1,5 @@
 import { Outlet, useLocation } from "@remix-run/react";
-import type { LoaderFunctionArgs } from "@remix-run/server-runtime";
+import type { LoaderFunctionArgs } from "@vercel/remix";
 import { typedjson } from "remix-typedjson";
 import { PageBody, PageContainer } from "~/components/layout/AppLayout";
 import { BreadcrumbLink } from "~/components/navigation/Breadcrumb";

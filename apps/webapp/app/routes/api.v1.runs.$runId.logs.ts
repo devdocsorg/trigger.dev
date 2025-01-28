@@ -1,6 +1,6 @@
 import type { Organization, RuntimeEnvironment } from "@trigger.dev/database";
-import type { ActionFunctionArgs } from "@remix-run/server-runtime";
-import { json } from "@remix-run/server-runtime";
+import type { ActionFunctionArgs } from "@vercel/remix";
+import { json } from "@vercel/remix";
 import type { LogMessage } from "@trigger.dev/core";
 import { LogMessageSchema } from "@trigger.dev/core";
 import { z } from "zod";

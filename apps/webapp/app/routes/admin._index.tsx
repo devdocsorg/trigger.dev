@@ -1,6 +1,6 @@
 import { Form } from "@remix-run/react";
-import type { ActionFunctionArgs } from "@remix-run/server-runtime";
-import { redirect } from "@remix-run/server-runtime";
+import type { ActionFunctionArgs } from "@vercel/remix";
+import { redirect } from "@vercel/remix";
 import { typedjson, useTypedLoaderData } from "remix-typedjson";
 import { z } from "zod";
 import { Button, LinkButton } from "~/components/primitives/Buttons";

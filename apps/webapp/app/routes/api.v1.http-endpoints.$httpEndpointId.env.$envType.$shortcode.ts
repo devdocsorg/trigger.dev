@@ -1,4 +1,4 @@
-import type { ActionFunctionArgs, LoaderFunctionArgs } from "@remix-run/server-runtime";
+import type { ActionFunctionArgs, LoaderFunctionArgs } from "@vercel/remix";
 import {
   HandleHttpEndpointService,
   HttpEndpointParamsSchema,

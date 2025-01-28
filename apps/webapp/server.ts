@@ -1,54 +1,84 @@
 import path from "path";
-import express from "express";
-import compression from "compression";
+import { Hono } from "hono";
+import { handle } from "hono/vercel";
+import type { MiddlewareHandler } from "hono";
+import { compress } from "hono/compress";
 import morgan from "morgan";
-import { createRequestHandler } from "@remix-run/express";
+import { reactRouter } from "remix-hono/handler";
 import { WebSocketServer } from "ws";
-import { broadcastDevReady, logDevReady } from "@remix-run/server-runtime";
+import { broadcastDevReady, logDevReady } from "@vercel/remix";
+// import { secureHeaders } from "hono/secure-headers";
+// import { createRequestHandler } from '@vercel/remix/server';
+import * as build from "@remix-run/dev/server-build";
+import { staticAssets } from "remix-hono/cloudflare";
 
-const app = express();
+export const runtime = "edge";
 
-app.use((req, res, next) => {
-  // helpful headers:
-  res.set("Strict-Transport-Security", `max-age=${60 * 60 * 24 * 365 * 100}`);
+type Bindings = {};
 
-  // /clean-urls/ -> /clean-urls
+type Variables = {};
+
+type ContextEnv = { Bindings: Bindings; Variables: Variables };
+
+const app = new Hono<ContextEnv>();
+
+const strictTransportSecurityMiddleware: MiddlewareHandler = async (ctx, next) => {
+  const { req, res, redirect } = ctx;
+
+  // Add helpful headers
+  res.headers.set("Strict-Transport-Security", `max-age=${60 * 60 * 24 * 365 * 100}`);
+
+  // Redirect `/path/` to `/path`
   if (req.path.endsWith("/") && req.path.length > 1) {
     const query = req.url.slice(req.path.length);
-    const safepath = req.path.slice(0, -1).replace(/\/+/g, "/");
-    res.redirect(301, safepath + query);
-    return;
+    const safePath = req.path.slice(0, -1).replace(/\/+/g, "/");
+    return redirect(`${safePath}${query}`, 301);
   }
-  next();
-});
+
+  await next();
+};
+
+app.use(strictTransportSecurityMiddleware);
 
 if (process.env.DISABLE_COMPRESSION !== "1") {
-  app.use(compression());
+  app.use(compress());
 }
 
-// http://expressjs.com/en/advanced/best-practice-security.html#at-a-minimum-disable-x-powered-by-header
-app.disable("x-powered-by");
+// TODO: https://hono.dev/docs/middleware/builtin/secure-headers#middleware-conflict
+// app.disable("x-powered-by");
 
 // Remix fingerprints its assets so we can cache forever.
-app.use("/build", express.static("public/build", { immutable: true, maxAge: "1y" }));
+app.use(
+  "/build/*",
+  staticAssets({
+    root: "./public/build", // Path to static assets
+    immutable: true,
+    maxAge: 60 * 60 * 24 * 365, // Cache for 1 year
+  })
+);
+// app.use("/build", express.static("public/build", { immutable: true, maxAge: "1y" }));
 
 // Everything else (like favicon.ico) is cached for an hour. You may want to be
 // more aggressive with this caching.
-app.use(express.static("public", { maxAge: "1h" }));
+// app.use(express.static("public", { maxAge: "1h" }));
 
 app.use(morgan("tiny"));
 
-const MODE = process.env.NODE_ENV;
-const BUILD_DIR = path.join(process.cwd(), "build");
-const build = require(BUILD_DIR);
+const MODE = process.env.NODE_ENV as "development" | "production";
 
 app.all(
   "*",
-  createRequestHandler({
+  // createRequestHandler({
+  //   build,
+  //   mode: MODE,
+  // })
+  reactRouter({
     build,
     mode: MODE,
   })
 );
+
+export default handle(app);
 
 const port = process.env.REMIX_APP_PORT || process.env.PORT || 3000;
 

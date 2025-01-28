@@ -1,7 +1,7 @@
 import { ArrowRightIcon } from "@heroicons/react/20/solid";
 import { ArrowUpCircleIcon } from "@heroicons/react/24/outline";
 import { Await, useLoaderData } from "@remix-run/react";
-import { DataFunctionArgs, defer } from "@remix-run/server-runtime";
+import { DataFunctionArgs, defer } from "@vercel/remix";
 import { Suspense } from "react";
 import { Bar, BarChart, ResponsiveContainer, Tooltip, TooltipProps, XAxis, YAxis } from "recharts";
 import { ConcurrentRunsChart } from "~/components/billing/ConcurrentRunsChart";

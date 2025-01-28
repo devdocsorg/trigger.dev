@@ -1,6 +1,6 @@
 import { NoSymbolIcon } from "@heroicons/react/20/solid";
 import { CheckCircleIcon, XCircleIcon } from "@heroicons/react/24/solid";
-import type { LoaderFunctionArgs } from "@remix-run/server-runtime";
+import type { LoaderFunctionArgs } from "@vercel/remix";
 import { typedjson, useTypedLoaderData } from "remix-typedjson";
 import { EnvironmentLabel } from "~/components/environments/EnvironmentLabel";
 import { BreadcrumbLink } from "~/components/navigation/Breadcrumb";

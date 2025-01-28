@@ -1,4 +1,4 @@
-import type { LoaderFunctionArgs } from "@remix-run/server-runtime";
+import type { LoaderFunctionArgs } from "@vercel/remix";
 import { z } from "zod";
 import { RunStreamPresenter } from "~/presenters/RunStreamPresenter.server";
 import { requireUserId } from "~/services/session.server";

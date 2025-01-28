@@ -1,4 +1,4 @@
-import { LoaderFunctionArgs } from "@remix-run/server-runtime";
+import { LoaderFunctionArgs } from "@vercel/remix";
 import { z } from "zod";
 import { logger } from "~/services/logger.server";
 import { sse } from "~/utils/sse.server";

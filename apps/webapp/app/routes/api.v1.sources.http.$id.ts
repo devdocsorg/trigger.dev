@@ -1,4 +1,4 @@
-import type { ActionFunctionArgs, LoaderFunctionArgs } from "@remix-run/server-runtime";
+import type { ActionFunctionArgs, LoaderFunctionArgs } from "@vercel/remix";
 import { z } from "zod";
 import { logger } from "~/services/logger.server";
 import { HandleHttpSourceService } from "~/services/sources/handleHttpSource.server";

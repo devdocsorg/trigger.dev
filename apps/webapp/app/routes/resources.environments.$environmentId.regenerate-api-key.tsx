@@ -1,4 +1,4 @@
-import type { ActionFunctionArgs } from "@remix-run/server-runtime";
+import type { ActionFunctionArgs } from "@vercel/remix";
 import { z } from "zod";
 import { regenerateApiKey } from "~/models/api-key.server";
 import { requireUserId } from "~/services/session.server";

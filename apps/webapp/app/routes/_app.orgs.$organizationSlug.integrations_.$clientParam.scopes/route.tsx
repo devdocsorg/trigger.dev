@@ -1,4 +1,4 @@
-import { LoaderFunctionArgs } from "@remix-run/server-runtime";
+import { LoaderFunctionArgs } from "@vercel/remix";
 import { typedjson, useTypedLoaderData } from "remix-typedjson";
 import { BreadcrumbLink } from "~/components/navigation/Breadcrumb";
 import { Paragraph } from "~/components/primitives/Paragraph";

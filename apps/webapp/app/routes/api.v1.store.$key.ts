@@ -1,5 +1,5 @@
-import type { ActionFunctionArgs, LoaderFunctionArgs } from "@remix-run/server-runtime";
-import { json } from "@remix-run/server-runtime";
+import type { ActionFunctionArgs, LoaderFunctionArgs } from "@vercel/remix";
+import { json } from "@vercel/remix";
 import { assertExhaustive } from "@trigger.dev/core";
 import { z } from "zod";
 import { authenticateApiRequest } from "~/services/apiAuth.server";

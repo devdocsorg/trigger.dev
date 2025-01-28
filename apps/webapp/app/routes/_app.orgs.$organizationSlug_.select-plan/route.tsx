@@ -1,5 +1,5 @@
 import { ChartBarIcon } from "@heroicons/react/20/solid";
-import { LoaderFunctionArgs } from "@remix-run/server-runtime";
+import { LoaderFunctionArgs } from "@vercel/remix";
 import { redirect, typedjson, useTypedLoaderData } from "remix-typedjson";
 import { PricingCalculator } from "~/components/billing/PricingCalculator";
 import { PricingTiers } from "~/components/billing/PricingTiers";

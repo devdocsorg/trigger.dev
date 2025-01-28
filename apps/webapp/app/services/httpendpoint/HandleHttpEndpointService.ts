@@ -3,7 +3,7 @@ import { z } from "zod";
 import { prisma } from "~/db.server";
 import { requestUrl } from "~/utils/requestUrl.server";
 import { logger } from "../logger.server";
-import { json } from "@remix-run/server-runtime";
+import { json } from "@vercel/remix";
 import {
   RequestFilterSchema,
   WebhookContextMetadataSchema,

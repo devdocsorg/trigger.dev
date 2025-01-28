@@ -8,7 +8,7 @@ import { Paragraph } from "~/components/primitives/Paragraph";
 import { useNewCustomerSubscribed } from "~/hooks/useNewCustomerSubscribed";
 import { useCurrentPlan } from "../_app.orgs.$organizationSlug/route";
 import { Handle } from "~/utils/handle";
-import { LoaderFunctionArgs } from "@remix-run/server-runtime";
+import { LoaderFunctionArgs } from "@vercel/remix";
 import { requireUserId } from "~/services/session.server";
 import { OrganizationsPresenter } from "~/presenters/OrganizationsPresenter.server";
 import { OrganizationParamsSchema } from "~/utils/pathBuilder";

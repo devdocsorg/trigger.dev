@@ -1,4 +1,4 @@
-import { ActionFunctionArgs, json } from "@remix-run/server-runtime";
+import { ActionFunctionArgs, json } from "@vercel/remix";
 import { CreateBackgroundWorkerRequestBody } from "@trigger.dev/core/v3";
 import { z } from "zod";
 import { authenticateApiRequest } from "~/services/apiAuth.server";

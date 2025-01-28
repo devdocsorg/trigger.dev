@@ -2,7 +2,7 @@ import { useForm } from "@conform-to/react";
 import { parse } from "@conform-to/zod";
 import { UserPlusIcon } from "@heroicons/react/20/solid";
 import { Form, useActionData } from "@remix-run/react";
-import { ActionFunction, LoaderFunctionArgs, json } from "@remix-run/server-runtime";
+import { ActionFunction, LoaderFunctionArgs, json } from "@vercel/remix";
 import { useState } from "react";
 import { UseDataFunctionReturn, typedjson, useTypedLoaderData } from "remix-typedjson";
 import invariant from "tiny-invariant";

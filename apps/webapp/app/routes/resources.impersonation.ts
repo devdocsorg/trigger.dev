@@ -1,4 +1,4 @@
-import type { ActionFunctionArgs } from "@remix-run/server-runtime";
+import type { ActionFunctionArgs } from "@vercel/remix";
 import { redirect } from "remix-typedjson";
 import { clearImpersonationId, commitImpersonationSession } from "~/services/impersonation.server";
 

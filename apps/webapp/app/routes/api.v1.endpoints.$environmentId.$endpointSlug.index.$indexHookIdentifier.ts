@@ -1,4 +1,4 @@
-import { ActionFunctionArgs, LoaderFunctionArgs, json } from "@remix-run/server-runtime";
+import { ActionFunctionArgs, LoaderFunctionArgs, json } from "@vercel/remix";
 import { RuntimeEnvironmentType } from "@trigger.dev/database";
 import { z } from "zod";
 import { $transaction, PrismaClient, prisma } from "~/db.server";

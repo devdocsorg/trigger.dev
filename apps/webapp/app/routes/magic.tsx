@@ -1,4 +1,4 @@
-import type { LoaderFunctionArgs } from "@remix-run/server-runtime";
+import type { LoaderFunctionArgs } from "@vercel/remix";
 import { authenticator } from "~/services/auth.server";
 import { getRedirectTo } from "~/services/redirectTo.server";
 

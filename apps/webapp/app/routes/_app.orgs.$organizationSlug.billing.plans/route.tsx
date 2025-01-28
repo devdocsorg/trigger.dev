@@ -1,7 +1,7 @@
 import { useForm } from "@conform-to/react";
 import { parse } from "@conform-to/zod";
 import { useActionData } from "@remix-run/react";
-import { LoaderFunctionArgs } from "@remix-run/server-runtime";
+import { LoaderFunctionArgs } from "@vercel/remix";
 import { SetPlanBodySchema } from "@trigger.dev/billing";
 import { redirect, typedjson, useTypedLoaderData } from "remix-typedjson";
 import { PricingCalculator } from "~/components/billing/PricingCalculator";

@@ -1,5 +1,5 @@
 import { Await, useLoaderData } from "@remix-run/react";
-import { LoaderFunctionArgs, defer } from "@remix-run/server-runtime";
+import { LoaderFunctionArgs, defer } from "@vercel/remix";
 import { Suspense } from "react";
 import { Spinner } from "~/components/primitives/Spinner";
 import { TaskDetail } from "~/components/run/TaskDetail";

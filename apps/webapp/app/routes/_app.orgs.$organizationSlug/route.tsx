@@ -1,5 +1,5 @@
 import { Outlet, ShouldRevalidateFunction, UIMatch } from "@remix-run/react";
-import type { LoaderFunctionArgs } from "@remix-run/server-runtime";
+import type { LoaderFunctionArgs } from "@vercel/remix";
 import { typedjson, useTypedLoaderData } from "remix-typedjson";
 import { z } from "zod";
 import { RouteErrorDisplay } from "~/components/ErrorDisplay";

@@ -1,4 +1,4 @@
-import { LoaderFunctionArgs, redirect } from "@remix-run/server-runtime";
+import { LoaderFunctionArgs, redirect } from "@vercel/remix";
 import { getUsersInvites } from "~/models/member.server";
 import { SelectBestProjectPresenter } from "~/presenters/SelectBestProjectPresenter.server";
 import { requireUser } from "~/services/session.server";

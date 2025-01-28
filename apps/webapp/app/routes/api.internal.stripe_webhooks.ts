@@ -1,4 +1,4 @@
-import { ActionFunctionArgs } from "@remix-run/server-runtime";
+import { ActionFunctionArgs } from "@vercel/remix";
 
 /*
   To use this route, use the stripe CLI to forward events to this route:

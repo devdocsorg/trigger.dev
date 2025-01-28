@@ -1,4 +1,4 @@
-import { ActionFunctionArgs } from "@remix-run/server-runtime";
+import { ActionFunctionArgs } from "@vercel/remix";
 import { ExportTraceServiceRequest, ExportTraceServiceResponse } from "@trigger.dev/otlp-importer";
 import { otlpExporter } from "~/v3/otlpExporter.server";
 

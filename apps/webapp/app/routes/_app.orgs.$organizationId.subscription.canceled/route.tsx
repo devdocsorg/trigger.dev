@@ -1,4 +1,4 @@
-import { LoaderFunctionArgs, redirect } from "@remix-run/server-runtime";
+import { LoaderFunctionArgs, redirect } from "@vercel/remix";
 import { z } from "zod";
 import { prisma } from "~/db.server";
 import { redirectWithErrorMessage } from "~/models/message.server";

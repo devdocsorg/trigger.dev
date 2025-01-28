@@ -1,6 +1,6 @@
 import { CheckIcon } from "@heroicons/react/20/solid";
 import { StopIcon } from "@heroicons/react/24/outline";
-import { LoaderFunctionArgs } from "@remix-run/server-runtime";
+import { LoaderFunctionArgs } from "@vercel/remix";
 import { typedjson, useTypedLoaderData } from "remix-typedjson";
 import { EnvironmentLabel } from "~/components/environments/EnvironmentLabel";
 import { HowToConnectHttpEndpoint } from "~/components/helpContent/HelpContentText";

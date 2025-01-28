@@ -1,5 +1,5 @@
 import { GetEndpointIndexResponse, GetEndpointIndexResponseSchema } from "@trigger.dev/core";
-import { ActionFunctionArgs, json } from "@remix-run/server-runtime";
+import { ActionFunctionArgs, json } from "@vercel/remix";
 import { z } from "zod";
 import { prisma } from "~/db.server";
 import { authenticateApiRequest } from "~/services/apiAuth.server";

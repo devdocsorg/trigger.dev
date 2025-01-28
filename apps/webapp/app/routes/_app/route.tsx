@@ -1,5 +1,5 @@
 import { Outlet } from "@remix-run/react";
-import type { LoaderFunctionArgs } from "@remix-run/server-runtime";
+import type { LoaderFunctionArgs } from "@vercel/remix";
 import { redirect, typedjson } from "remix-typedjson";
 import { RouteErrorDisplay } from "~/components/ErrorDisplay";
 import { AppContainer, MainCenteredContainer } from "~/components/layout/AppLayout";

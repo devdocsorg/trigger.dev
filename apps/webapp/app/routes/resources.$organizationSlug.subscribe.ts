@@ -1,5 +1,5 @@
 import { parse } from "@conform-to/zod";
-import { ActionFunctionArgs, json } from "@remix-run/server-runtime";
+import { ActionFunctionArgs, json } from "@vercel/remix";
 import { SetPlanBodySchema } from "@trigger.dev/billing";
 import { redirect } from "remix-typedjson";
 import { prisma } from "~/db.server";

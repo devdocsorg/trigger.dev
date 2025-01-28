@@ -1,4 +1,4 @@
-import type { LoaderFunctionArgs } from "@remix-run/server-runtime";
+import type { LoaderFunctionArgs } from "@vercel/remix";
 import { getInviteFromToken } from "~/models/member.server";
 import { redirectWithErrorMessage, redirectWithSuccessMessage } from "~/models/message.server";
 import { getUser } from "~/services/session.server";

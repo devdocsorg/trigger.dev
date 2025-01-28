@@ -1,4 +1,4 @@
-import { LoaderFunctionArgs } from "@remix-run/server-runtime";
+import { LoaderFunctionArgs } from "@vercel/remix";
 import { UseDataFunctionReturn, typedjson, useTypedLoaderData } from "remix-typedjson";
 import { Spinner } from "~/components/primitives/Spinner";
 import { TaskDetail } from "~/components/run/TaskDetail";

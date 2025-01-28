@@ -1,4 +1,4 @@
-import { LoaderFunctionArgs } from "@remix-run/server-runtime";
+import { LoaderFunctionArgs } from "@vercel/remix";
 import { typedjson, useTypedLoaderData } from "remix-typedjson";
 import { HowToUseThisIntegration } from "~/components/helpContent/HelpContentText";
 import { JobSkeleton } from "~/components/jobs/JobSkeleton";

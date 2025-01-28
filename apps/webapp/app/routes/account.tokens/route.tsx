@@ -3,7 +3,7 @@ import { parse } from "@conform-to/zod";
 import { ShieldCheckIcon } from "@heroicons/react/20/solid";
 import { ShieldExclamationIcon } from "@heroicons/react/24/solid";
 import { Form, useActionData, useFetcher } from "@remix-run/react";
-import { ActionFunction, LoaderFunctionArgs, json } from "@remix-run/server-runtime";
+import { ActionFunction, LoaderFunctionArgs, json } from "@vercel/remix";
 import { redirect, typedjson, useTypedLoaderData } from "remix-typedjson";
 import { z } from "zod";
 import { PageBody, PageContainer } from "~/components/layout/AppLayout";

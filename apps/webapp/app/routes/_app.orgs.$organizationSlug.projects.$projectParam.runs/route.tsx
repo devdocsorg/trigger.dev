@@ -1,5 +1,5 @@
 import { Await, useLoaderData, useLocation, useNavigate, useNavigation } from "@remix-run/react";
-import { LoaderFunctionArgs, defer } from "@remix-run/server-runtime";
+import { LoaderFunctionArgs, defer } from "@vercel/remix";
 import { typedjson, useTypedLoaderData } from "remix-typedjson";
 import { PageBody, PageContainer } from "~/components/layout/AppLayout";
 import { LinkButton } from "~/components/primitives/Buttons";

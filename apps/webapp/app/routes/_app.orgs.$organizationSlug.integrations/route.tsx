@@ -1,5 +1,5 @@
 import { ChevronRightIcon } from "@heroicons/react/24/solid";
-import type { LoaderFunctionArgs } from "@remix-run/server-runtime";
+import type { LoaderFunctionArgs } from "@vercel/remix";
 import { useState } from "react";
 import { typedjson, useTypedLoaderData } from "remix-typedjson";
 import { IntegrationIcon } from "~/assets/icons/IntegrationIcon";

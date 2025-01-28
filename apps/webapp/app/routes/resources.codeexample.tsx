@@ -1,5 +1,5 @@
 import { useFetcher } from "@remix-run/react";
-import { LoaderFunctionArgs, json } from "@remix-run/server-runtime";
+import { LoaderFunctionArgs, json } from "@vercel/remix";
 import { useEffect } from "react";
 import invariant from "tiny-invariant";
 import { CodeBlock } from "~/components/code/CodeBlock";

@@ -1,4 +1,4 @@
-import { ActionFunctionArgs, json } from "@remix-run/server-runtime";
+import { ActionFunctionArgs, json } from "@vercel/remix";
 import { z } from "zod";
 import { ApiVoteService } from "~/services/apiVote.server";
 import { requireUserId } from "~/services/session.server";
